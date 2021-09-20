@@ -26,9 +26,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
       body: Column(
 
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children:<Widget>[
 
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,  //add Space between each element
+          children:<Widget>[
+//First Row
             Expanded(
 
               flex: 20,
@@ -71,6 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
             ),
+//Second Row
             Expanded(
               flex: 15,
               child: Row(
@@ -126,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-
+//Third Row
             Expanded(
               flex: 15,
               child: Row(
@@ -167,11 +169,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+//Fourth Row
             Expanded(
-              flex: 5,
+                flex: 5,
                 child: Row(
 
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   textBaseline: TextBaseline.alphabetic,
                   children: <Widget>[
@@ -182,114 +185,99 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
 
             ),
-      Divider(
-        color: Colors.black,
-        height: 20,
-        thickness: 2,
-        indent: 10,
-        endIndent: 10,
-      ),
+            Divider(
+              color: Colors.black,
+              height: 20,
+              thickness: 1,
+              indent: 8,
+              endIndent: 8,
+            ),
+// Fifth Row
+            Expanded(
+              flex: 35,
 
-        Expanded(
-            flex: 35,
-            child: Row(
+              child: Row(
                 children:<Widget>[
 
-                  Expanded(
-                    flex: 33,
+                  Container(
+                    margin: EdgeInsets.only(left:20.0),
                     child:Column(
-
-                      crossAxisAlignment: CrossAxisAlignment.baseline,
-                      textBaseline: TextBaseline.alphabetic,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      textDirection: TextDirection.ltr,
                       children: [
-                        Wrap(
-                            spacing: 20, // to apply margin in the main axis of the wrap
-                            runSpacing: 20, // to apply margin in the cross axis of the wrap
-                            children: <Widget>[
-                              Text(
-                                'TEXT',
-                                style: TextStyle(fontWeight: FontWeight.bold,
-
-                                    fontSize: 30.0
-                                ),
-                              ),
-                              Text(
-                                'TEXT',
-                                style: TextStyle(
-
-                                    fontSize: 20.0
-                                ),
-                              ),
-                            ]
-                        )
-
+                        Text(
+                          'TEXT',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30.0
+                          ),
+                        ),
+                        Text(
+                          'TEXT',
+                          style: TextStyle(
+                              height: 2,
+                              fontSize: 20.0
+                          ),
+                        ),
                       ],
                     ),
                   ),
                   Expanded(
-                    flex: 33,
+                    flex: 60,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      textDirection: TextDirection.ltr,
-                      children: [
-                        Wrap(
-                            spacing: 20, // to apply margin in the main axis of the wrap
-                            runSpacing: 20, // to apply margin in the cross axis of the wrap
-                            children: <Widget>[
-                              Text(
-                                'TEXT',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 30.0
-                                ),
-                              ),
-                              Text(
-                                'TEXT',
-                                style: TextStyle(
 
-                                    fontSize: 20.0
-                                ),
-                              ),
-                            ]
-                        )
+                      children: [
+                        Text(
+                          'TEXT',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30.0,
+
+                          ),
+                        ),
+                        Text(
+                          'TEXT',
+                          style: TextStyle(
+                              height:3,
+                              fontSize: 20.0
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                  Expanded(
-                    flex: 33,
+                  Container(
+                    margin: EdgeInsets.only(right:20.0),
 
-                    child: Column(
-
+                      child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      textDirection: TextDirection.ltr,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      textDirection: TextDirection.rtl,
+
                       children: [
 
-                        Wrap(
-                            spacing: 20, // to apply margin in the main axis of the wrap
-                            runSpacing: 20, // to apply margin in the cross axis of the wrap
-                            children: <Widget>[
-                              Text(
-                                'TEXT',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 30.0
-                                ),
-                              ),
-                              Text(
-                                'TEXT',
-                                style: TextStyle(
+                        Text(
+                          'TEXT',
+                          style: TextStyle(
 
-                                    fontSize: 20.0
-                                ),
-                              ),
-                            ]
-                        )
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30.0
+                          ),
+                        ),
+                        Text(
+                          'TEXT',
+                          style: TextStyle(
+                              height: 2,
+                              fontSize: 20.0
+                          ),
+                        ),
                       ],
                     ),
                   ),
                 ],
+              ),
             ),
-        ),
 
 
 
